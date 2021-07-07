@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.3 (Python 3.9.5 on win32)" generated="20210707 00:51:52.434" rpa="false" schemaversion="2">
+<suite id="s1" name="Mobile Test" source="C:\Users\gabri\OneDrive\Documentos\PrimeExperts Projects\PrimeExperts_junho_28_2021\mobile_test\mobile_test.robot">
+<kw name="Abrir o aplicativo no celular" library="resource_mobile" type="SETUP">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20210707 00:51:52.630" endtime="20210707 00:52:09.645"/>
+</kw>
+<status status="PASS" starttime="20210707 00:51:52.629" endtime="20210707 00:52:09.646"/>
+</kw>
+<test id="s1-t1" name="Pesquisar canal &quot;Adrenaline&quot;">
+<kw name="Abrir o aplicativo no celular" library="resource_mobile">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20210707 00:52:09.647" endtime="20210707 00:52:26.479"/>
+</kw>
+<status status="PASS" starttime="20210707 00:52:09.647" endtime="20210707 00:52:26.479"/>
+</kw>
+<kw name="Buscar o canal “Adrenaline&quot;" library="resource_mobile" sourcename="Buscar o canal “${nome_do_canal}&quot;">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${BTN_SEARCH}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20210707 00:52:26.480" endtime="20210707 00:52:28.408"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BTN_SEARCH}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210707 00:52:28.411" level="INFO">Clicking element 'accessibility_id=Search'.</msg>
+<status status="PASS" starttime="20210707 00:52:28.409" endtime="20210707 00:52:28.474"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${INPUT_SEARCH}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20210707 00:52:28.474" endtime="20210707 00:52:29.629"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${INPUT_SEARCH}</arg>
+<arg>${nome_do_canal}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20210707 00:52:29.631" level="INFO">Typing text 'Adrenaline' into text field 'search_edit_text'</msg>
+<status status="PASS" starttime="20210707 00:52:29.629" endtime="20210707 00:52:30.290"/>
+</kw>
+<kw name="Press Keycode" library="AppiumLibrary">
+<arg>66</arg>
+<doc>Sends a press of keycode to the device.</doc>
+<status status="PASS" starttime="20210707 00:52:30.291" endtime="20210707 00:52:31.197"/>
+</kw>
+<status status="PASS" starttime="20210707 00:52:26.480" endtime="20210707 00:52:31.197"/>
+</kw>
+<kw name="Selecionar o canal na lista de busca" library="resource_mobile">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${CHANNEL_NAME}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20210707 00:52:31.198" endtime="20210707 00:52:33.334"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${CHANNEL_NAME}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210707 00:52:33.338" level="INFO">Clicking element 'channel_name'.</msg>
+<status status="PASS" starttime="20210707 00:52:33.335" endtime="20210707 00:52:33.410"/>
+</kw>
+<status status="PASS" starttime="20210707 00:52:31.198" endtime="20210707 00:52:33.410"/>
+</kw>
+<kw name="Navegar pelo menu Playlist" library="resource_mobile">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${PLAYLISTS}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20210707 00:52:33.411" endtime="20210707 00:52:35.056"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${PLAYLISTS}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210707 00:52:35.058" level="INFO">Clicking element 'accessibility_id=Playlists'.</msg>
+<status status="PASS" starttime="20210707 00:52:35.056" endtime="20210707 00:52:35.100"/>
+</kw>
+<status status="PASS" starttime="20210707 00:52:33.411" endtime="20210707 00:52:35.100"/>
+</kw>
+<kw name="Selecionar a playlist da E3 do canal" library="resource_mobile">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${CHOOSE_E3}</arg>
+<arg>10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20210707 00:52:35.101" endtime="20210707 00:52:36.458"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${CHOOSE_E3}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210707 00:52:36.460" level="INFO">Clicking element 'xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.FrameLayout/android.support.v4.view.ViewPager/android.view.ViewGroup/android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[2]/android.widget.TextView[1]'.</msg>
+<status status="PASS" starttime="20210707 00:52:36.458" endtime="20210707 00:52:36.587"/>
+</kw>
+<status status="PASS" starttime="20210707 00:52:35.101" endtime="20210707 00:52:36.587"/>
+</kw>
+<kw name="Navegar por todos os botões da barra de Menus(Home, Explorar...) do YouTube" library="resource_mobile">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${HOME_BTN}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210707 00:52:36.590" level="INFO">Clicking element 'accessibility_id=Home'.</msg>
+<status status="PASS" starttime="20210707 00:52:36.588" endtime="20210707 00:52:37.805"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${TRENDING_BTN}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210707 00:52:37.809" level="INFO">Clicking element 'accessibility_id=Trending'.</msg>
+<status status="PASS" starttime="20210707 00:52:37.805" endtime="20210707 00:52:38.629"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${SUBSCRIPTIONS_BTN}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210707 00:52:38.631" level="INFO">Clicking element 'accessibility_id=Subscriptions'.</msg>
+<status status="PASS" starttime="20210707 00:52:38.629" endtime="20210707 00:52:40.656"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${NOTIFICATION_BTN}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210707 00:52:40.660" level="INFO">Clicking element 'accessibility_id=Notifications'.</msg>
+<status status="PASS" starttime="20210707 00:52:40.656" endtime="20210707 00:52:40.725"/>
+</kw>
+<status status="PASS" starttime="20210707 00:52:36.587" endtime="20210707 00:52:40.726"/>
+</kw>
+<status status="PASS" starttime="20210707 00:52:09.646" endtime="20210707 00:52:40.726"/>
+</test>
+<doc>arquivo responsavel pelos testes do mobile testing App: YouTube</doc>
+<status status="PASS" starttime="20210707 00:51:52.435" endtime="20210707 00:52:40.728"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Mobile Test">Mobile Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
